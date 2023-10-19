@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Form</title>
+</head>
+<style>
+    /* Form container */
+    .styled-form {
+        width: 50%;
+        margin: 0 auto;
+        padding: 15px;
+        border: 1px solid #cecece;
+        background-color: #f5f5f5;
+    }
+
+    /* Labels */
+    label {
+        color: #333;
+        font-weight: bold;
+    }
+
+    .firstName {
+        background-color: #f88484;
+    }
+
+    .lastName {
+        background-color: #95ed95;
+    }
+
+    .email {
+        background-color: #f56de8;
+    }
+
+    .password {
+        background-color: yellow;
+    }
+    .confirmPassword {
+        background-color: yellow;
+    }
+    .age {
+        background-color: #f3ab3e;
+    }
+    /* Submit button */
+    button {
+        padding: 8px 20px;
+        background-color: #007bff;
+        color: #fff;
+        opacity: 50%;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<body>
+    <form class="styled-form">
+        <h3 style="text-align: center; font-style: oblique;">Sign Up Form</h2>
+        <label for="firstName">First Name:
+            <input type="text" name="firstName" class="firstName" placeholder="First Name" id="firstName" required
+                minlength=3 max=20 />
+        </label>
+        <br>
+        <label for="lastName">Last Name:
+            <input type="text" name="lastName" class="lastName" placeholder="Last Name" id="lastName" required min=3
+                max=20 />
+        </label>
+        <br>
+        <label for="email">Email:
+            <input type="email" name="email" class="email" placeholder="name@exmaple.com" id="email" required />
+        </label>
+        <br>
+        <label for="password">Password:
+            <input type="password" name="password" class="password" placeholder="********" id="password" required
+                min=8 />
+        </label>
+        <br>
+        <label for="confirmPassword">Confirm Password:
+            <input type="password" name="confirmPassword" class="confirmPassword" placeholder="********"
+                id="confirmPassword" required />
+        </label>
+        <br>
+        <label for="age">Age:
+            <input type="number" name="age" class="age" placeholder="25" id="age" required min=0 max=120 />
+        </label>
+        <br>
+        <label>Gender:
+            <input type="radio" id="male" value="male" name="gender" checked />
+            <label for="male">Male</label>
+            <input type="radio" id="female" value="female" name="gender" />
+            <label for="female">Female</label>
+        </label>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

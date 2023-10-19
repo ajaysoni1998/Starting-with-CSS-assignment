@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 1</title>
+    <!-- Internal styles -->
+    <style>
+        .internal {
+            color: green;
+        }
+
+        .inline__internal {
+            color: red;
+        }
+
+        .internal__ext {
+            color: blue;
+        }
+
+        .inline__internal__external {
+            color: aqua;
+        }
+    </style>
+    <!-- depending on the order external wins since external has been imported after internal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="text-align: center;">
+    <div style="color: red;">Inline CSS</div>
+    <div class="internal">Internal CSS</div>
+    <div class="external">External CSS</div>
+    <div style="color: blueviolet;" class="inline__internal">Inline CSS + Internal CSS</div>
+    <div class="int__external internal__ext">Internal CSS + External CSS</div>
+    <div style="color: black;" class="inline__internal__external">Inline CSS + Internal CSS +
+        External CSS</div>
+</body>
+
+</html>
